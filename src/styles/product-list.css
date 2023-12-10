@@ -1,0 +1,48 @@
+.product-list_wrapper {
+    justify-content: center;
+    margin: 10px;
+    grid-gap: 2px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    grid-template-rows: auto;
+    height: 100%;
+}
+.product-list_wrapper>div{
+    height: 70px;
+}
+
+/* responsive */
+/*Ipad ngang(1024 x 768)*/
+@media screen and (max-width: 1024px) {
+    .product-list_wrapper{
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+}
+
+/*Ipad dọc(768 x 1024)*/
+@media screen and (max-width: 768px) {
+    .product-list_wrapper {
+        grid-gap: 5px;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto;
+    }
+}
+
+/*Tablet nhỏ(480 x 640)*/
+@media screen and (max-width: 480px) {
+    .product-list_wrapper {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+    }
+}
+
+/*Iphone(480 x 640)*/
+@media screen and (max-width: 320px) {
+    .product-list_wrapper {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+    }
+}
+
+/*Smart phone nhỏ*/
+@media screen and (max-width: 240px) {}

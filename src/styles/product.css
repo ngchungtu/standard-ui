@@ -1,0 +1,144 @@
+.product-container {
+    margin: 0;
+    padding: 0;
+}
+
+.product-item {
+    margin: 10px;
+    padding: 5px;
+    /* width: 100%; */
+    display: flex;
+    flex-direction: row;
+}
+
+.product-header {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.product-header>span {
+    margin: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.product-img {
+    width: 100%;
+}
+
+.product-img>img {
+    width: 100%;
+    height: auto;
+}
+
+.product-detail {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px;
+}
+
+.product-detail .product-price>span {
+    color: #dc2626;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.product-promotion .promotion-info {
+    width: 100%;
+    background-color: #e2e8f0;
+    font-size: 14px;
+    margin: 5px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.product-promotion-header {
+    line-height: 5px;
+}
+
+.product-promotion-header>p:nth-child(1) {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.product-promotion-header>p:nth-child(2) {
+    color: #4b5563;
+    font-size: 13px;
+}
+
+.product-promotion .promotion-info>span:nth-child(1) {
+    color: #fff;
+    padding: 1px 7px;
+    margin: 15px 5px;
+    height: 20px;
+    border-radius: 80%;
+    background-color: #1e40af;
+}
+
+.product-promotion .promotion-info .r-div {
+    margin: 0 6px;
+}
+
+.buyNow {
+    width: 100%;
+}
+
+.buyNow>button {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f97316;
+    color: #fff;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+/* responsive */
+/*Ipad ngang(1024 x 768)*/
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 991px) {
+    .content {
+        max-width: 90%;
+    }
+
+    .product-item {
+        margin: 0;
+        padding: 0;
+    }
+
+    .product-header {
+        width: 50%;
+        margin: 10px;
+    }
+
+    .product-detail {
+        margin: 10px;
+    }
+}
+
+/*Ipad dọc(768 x 1024)*/
+@media screen and (max-width: 768px) {
+    .product-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+    }
+    .product-header, .product-detail{
+        width: 100%;
+    }
+}
+
+/*Tablet nhỏ(480 x 640)*/
+@media screen and (max-width: 480px) {}
+
+/*Iphone(480 x 640)*/
+@media screen and (max-width: 320px) {}
+
+/*Smart phone nhỏ*/
+@media screen and (max-width: 240px) {}
