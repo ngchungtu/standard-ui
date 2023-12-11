@@ -1,5 +1,5 @@
 .cart-container {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     justify-content: center;
     margin: 15px;
@@ -91,16 +91,157 @@
 
 .cart-product-item-total .de-incre-quantity>input:nth-child(1),
 .cart-product-item-total .de-incre-quantity>input:nth-child(3) {
-    margin: 5px;
+    margin: 3px;
+    padding: 8px 10px;
     cursor: pointer;
 }
-.total-provisional{
+
+.total-provisional {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 0 10px;
     line-height: 0.5px;
 }
-.total-provisional>h5{
+
+.total-provisional>h5 {
     font-weight: normal;
 }
+
+.line {
+    border-top: 1px solid #ccc;
+}
+
+.customer-info {
+    margin: 10px 0;
+}
+
+.customer-info>h2 {
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0 10px;
+}
+
+.input-chose-gender {
+    margin: 5px;
+}
+
+.input-phone-name,
+.another {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.input-phone-name>input,
+.another>input {
+    margin: 5px;
+    padding: 8px;
+    border: 1px solid #6b7280;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.buyNow {
+    width: 100%;
+    display: flex;
+}
+
+.buyNow>button {
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* responsive */
+/*Ipad ngang(1024 x 768)*/
+@media screen and (max-width: 1024px) {
+    .cart-content {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .cart-content {
+        width: 80%;
+    }
+}
+
+/*Ipad dọc(768 x 1024)*/
+@media screen and (max-width: 768px) {
+    .cart-content {
+        width: 80%;
+    }
+
+    .cart-product-img>img {
+        width: 55px;
+    }
+
+    .cart-product-detail>h3 {
+        font-size: 10px;
+    }
+
+    .cart-product-detail,
+    .cart-product-item-total .total {
+        margin: 0px 5px;
+    }
+
+    .cart-product-item-total .total>h5:nth-child(1),
+    .cart-product-item-total .total>h5:nth-child(2) {
+        font-size: 12px;
+    }
+}
+
+/*Tablet nhỏ(480 x 640)*/
+@media screen and (max-width: 480px) {
+    .cart-content {
+        width: 90%;
+    }
+
+    .cart-product {
+        display: flex;
+        flex-direction: column;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    }
+
+    .cart-product-img>img {
+        height: 100px;
+        width: auto;
+    }
+
+    .cart-product-item-total {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .total-provisional {
+        line-height: normal;
+    }
+
+    .total-provisional>h5 {
+        margin: 0;
+    }
+
+    .line {
+        margin: 10px 0;
+    }
+
+    .input-phone-name {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .input-phone-name>input,
+    .another>input {
+        width: 100%;
+        width: auto;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+/*Iphone(480 x 640)*/
+@media screen and (max-width: 320px) {}
+
+/*Smart phone nhỏ*/
+@media screen and (max-width: 240px) {}
