@@ -8,6 +8,10 @@ export const menuItemsData = [
       url: "/cart",
     },
     {
+      title: "Cart Result",
+      url: "/cart-result",
+    },
+    {
       title: "Services",
       url: "/services",
       submenu: [

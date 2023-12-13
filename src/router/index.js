@@ -4,6 +4,7 @@ import Product from '../components/Product'
 import Cart from '../components/Cart'
 import ErrorPage from '../components/ErrorPage'
 import Root from './Root'
+import CartResult from "../components/CartResult";
 
 export const router = createBrowserRouter([
     {
@@ -23,6 +24,11 @@ export const router = createBrowserRouter([
             {
                 path: "/cart",
                 element: <Cart />,
+                errorElement: <ErrorPage />,
+            },
+            {
+                path: "/cart-result",
+                element: <CartResult/>,
                 errorElement: <ErrorPage />,
             },
         ]
