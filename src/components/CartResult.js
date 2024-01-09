@@ -25,7 +25,7 @@ const CartResult = () => {
               <img src="https://cdn.tgdd.vn/Products/Images/3385/309481/may-loc-nuoc-ro-nong-nguoi-lanh-karofi-kad-x56-11-loi-0-200x200.jpg" alt="" />
             </div>
             <div className="cr-product-info">
-              <div>
+              <div className='cr-product-info_productName'>
                 <h3>Máy lọc nước RO nóng nguội lạnh Karofi KAD-X56 11 lõi</h3>
               </div>
               <div className="cr-product-detail">
@@ -34,8 +34,8 @@ const CartResult = () => {
                   <h5>Số lượng: 1</h5>
                 </div>
                 <div>
-                  <h5>8.490.000₫</h5>
-                  <h5>10.790.000₫</h5>
+                  <h5>Giá: 8.490.000₫</h5>
+                  <h5>Tổng: 10.790.000₫</h5>
                 </div>
               </div>
             </div>

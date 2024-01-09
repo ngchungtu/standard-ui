@@ -231,10 +231,14 @@
         width: 100%;
     }
 
-    .input-phone-name>input,
-    .another>input {
-        width: 100%;
+    .input-phone-name>input
+    {
         width: auto;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .another>input{
+        width: 100%;
         overflow: hidden;
         text-overflow: ellipsis;
     }

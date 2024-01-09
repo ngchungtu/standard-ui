@@ -87,6 +87,48 @@
     font-weight: normal;
     font-size: 12px;
 }
-.cr-total>h5{
+
+.cr-total>h5 {
     font-weight: 500;
 }
+
+/* responsive */
+/*Ipad ngang(1024 x 768)*/
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 991px) {}
+
+/*Ipad dọc(768 x 1024)*/
+@media screen and (max-width: 768px) {}
+
+/*Tablet nhỏ(480 x 640)*/
+@media screen and (max-width: 480px) {
+    .cr-container {
+        width: 80%;
+    }
+
+    .cr-product-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cr-product-img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cr-customer-info>h5,
+    .cr-id>h5 {
+        font-size: 12px;
+    }
+
+    .cr-product-info>.cr-product-info_productName>h3 {
+        font-size: 13px;
+    }
+}
+
+/*Iphone(480 x 640)*/
+@media screen and (max-width: 320px) {}
+
+/*Smart phone nhỏ*/
+@media screen and (max-width: 240px) {}
