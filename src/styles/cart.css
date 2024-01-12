@@ -152,6 +152,23 @@
     cursor: pointer;
 }
 
+.policy {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+}
+
+.policy>li {
+    list-style: none;
+    margin: 10px;
+}
+
+.policy>li>i {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
 /* responsive */
 /*Ipad ngang(1024 x 768)*/
 @media screen and (max-width: 1024px) {
@@ -231,13 +248,13 @@
         width: 100%;
     }
 
-    .input-phone-name>input
-    {
+    .input-phone-name>input {
         width: auto;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    .another>input{
+
+    .another>input {
         width: 100%;
         overflow: hidden;
         text-overflow: ellipsis;

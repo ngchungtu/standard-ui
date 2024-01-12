@@ -1,10 +1,20 @@
-.footer_wrapper {
-    justify-content: center;
+.po-container {
+    position: absolute;
+    background-color: #e2e8f0;
+    z-index: 1;
+    left: 110px;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.po-container>ul {
     margin: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    height: 150px;
+    padding: 5px 10px;
+}
+
+.po-container>ul>li {
+    list-style: none;
+    font-size: 14px;
 }
 
 /*Ipad ngang(1024 x 768)*/
@@ -17,13 +27,9 @@
 
 /*Tablet nhỏ(480 x 640)*/
 @media screen and (max-width: 480px) {
-    .footer_wrapper {
-        justify-content: center;
-        margin: 10px 0;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: auto;
-        height: 150px;
+    .po-container{
+        left: 0;
+        top: 40px;
     }
 }
 

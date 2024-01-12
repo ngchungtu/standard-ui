@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import MobileDropdown from "./MobileDropdown";
 import '../../styles/navbar-dropdown.css'
+import CartPopup from "../CartPopup";
 
 const MobileMenuItems = ({ items, depthLevel, showMenu, setShowMenu }) => {
   const [dropdown, setDropdown] = useState(false);
@@ -62,9 +63,19 @@ const MobileMenuItems = ({ items, depthLevel, showMenu, setShowMenu }) => {
             dropdown={dropdown}
           />
         </>
-      ) : (
-        <Link to={items.url}>{items.title}</Link>
-      )}
+      ) : items.popup
+        ? (
+          <>
+            <Link to="/cart">
+              {items.title_popup}
+              <span className="badge">3</span>
+            </Link>
+          </>
+        )
+        : (
+          <Link to={items.url}>{items.title}</Link>
+        )
+      }
     </li>
   );
 };

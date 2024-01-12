@@ -49,6 +49,11 @@ export const menuItemsData = [
       ],
     },
     {
+      title_popup: "Giỏ hàng",
+      popup: true,
+      url: "/cart",
+    },
+    {
       title: "About",
       url: "/about",
     },

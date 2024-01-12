@@ -1,15 +1,39 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import '../styles/cart.css'
+import Policy from './Policy'
 
 const Cart = () => {
+  const [activePolicy, setActivePolicy] = useState(false)
+  let ref = useRef()
+
+  useEffect(() => {
+    const handleHoverActivePolicy = (e) => {
+      if (activePolicy && ref.current && !ref.current.contains(e.target)) {
+        setActivePolicy(true)
+      }
+    };
+    document.addEventListener("mousedown", handleHoverActivePolicy);
+    document.addEventListener("touchstart", handleHoverActivePolicy);
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener("mousedown", handleHoverActivePolicy);
+      document.removeEventListener("touchstart", handleHoverActivePolicy);
+    };
+  }, [activePolicy])
+
+  const onMouseEnter = () => {
+    // console.log("enter");
+    setActivePolicy(true);
+  };
+
+  const onMouseLeave = () => {
+    // console.log("leave");
+    setActivePolicy(false);
+  };
+
   return (
     <div className="cart-container">
-      {/* <div className="cart-status"></div> */}
       <div className="cart-content">
-        {/* <div className="cart-info">
-          <div className="customer-info"></div>
-          <div className="cart-id"></div>
-        </div> */}
 
         <div className="cart-product">
           <div className="cart-product-img">
@@ -66,6 +90,18 @@ const Cart = () => {
         <div className="buyNow">
           <button>Đặt hàng</button>
         </div>
+
+        <div className='policy'>
+          <li
+            className='policy-info'
+            ref={ref}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+            onClick={()=>setActivePolicy(!activePolicy)}
+          >Chính sách<i className="ri-information-line"></i></li>
+          <Policy activePolicy={activePolicy} />
+        </div>
+
       </div>
     </div>
   )
